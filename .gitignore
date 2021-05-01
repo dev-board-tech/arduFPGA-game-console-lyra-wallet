@@ -332,3 +332,7 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+rtl/lattice/impl_1/
+rtl/lattice/arduFPGA_game_console_lyra_wallet_tcr.dir
+.log
+

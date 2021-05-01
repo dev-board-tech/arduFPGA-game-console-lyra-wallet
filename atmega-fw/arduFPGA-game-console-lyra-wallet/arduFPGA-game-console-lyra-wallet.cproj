@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32U4</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>arduFPGA-game-console-simple-tank-demo</AssemblyName>
+    <Name>arduFPGA-game-console-simple-tank-demo</Name>
+    <RootNamespace>arduFPGA-game-console-simple-tank-demo</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <avrtool>
+    </avrtool>
+    <avrtoolserialnumber>070000000EF5</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber>
+      </ToolNumber>
+      <ToolName>Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+    <avrtoolinterface>
+    </avrtoolinterface>
+    <com_atmel_avrdbg_tool_jtagicemkii>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>2000000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>ISP</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.jtagicemkii</ToolType>
+      <ToolNumber>070000000EF5</ToolNumber>
+      <ToolName>JTAGICE mkII</ToolName>
+    </com_atmel_avrdbg_tool_jtagicemkii>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32u4 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega32u4"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega32u4 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega32u4"</avrgcc.common.Device>
+  <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.SubroutinesFunctionPrologues>True</avrgcc.compiler.general.SubroutinesFunctionPrologues>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>__AVR_MEGA__</Value>
+      <Value>uECC_PLATFORM=7</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>..</Value>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.linker.memorysettings.InitialStack>0x803FFF</avrgcc.linker.memorysettings.InitialStack>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.3.300\include</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+    <PostBuildEvent>"$(ToolchainDir)\avr-objcopy" -O binary "$(OutputFileName).elf" "../../lyra-wallet.app"</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="api.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="convert\base58.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="convert\base58.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\aes256.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\aes256.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\sha256.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\sha256.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="def_plat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="device\ssd1306.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="device\ssd1306.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\kbd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\kbd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\twi_s.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\twi_s.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="driver\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ecc\ecc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ecc\ecc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="gfx\draw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="gfx\draw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="memory.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="states.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\ecc_dha_aes.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\ecc_dha_aes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\base58.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\base58.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\portableSignatures.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\portableSignatures.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\signatures.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="crypto\signatures.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ffconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="gfx\logo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="gfx\logo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="lyra_global.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="resources\logo\logo_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="resources\logo\logo_init.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sys\delay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sys\delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sys\sys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\unions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\util-fat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\util.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="util\util.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gfx" />
+    <Folder Include="convert" />
+    <Folder Include="crypto" />
+    <Folder Include="ecc" />
+    <Folder Include="driver" />
+    <Folder Include="device" />
+    <Folder Include="util" />
+    <Folder Include="sys" />
+    <Folder Include="resources" />
+    <Folder Include="resources\logo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
